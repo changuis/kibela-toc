@@ -1,0 +1,34 @@
+# Kibela TOC Generator - コピペ用コマンド
+
+## 基本的な使用方法（デフォルト深度3: H1, H2, H3）
+python kibela_toc.py https://spikestudio.kibe.la/notes/YOUR_NOTE_ID
+
+## 深度を指定して実行
+# H1とH2のみ
+python kibela_toc.py https://spikestudio.kibe.la/notes/YOUR_NOTE_ID --depth 2
+
+# H1からH4まで
+python kibela_toc.py https://spikestudio.kibe.la/notes/YOUR_NOTE_ID --depth 4
+
+# 全ての見出しレベル（H1-H6）
+python kibela_toc.py https://spikestudio.kibe.la/notes/YOUR_NOTE_ID --depth 6
+
+## ドライラン（プレビューのみ、実際の更新は行わない）
+python kibela_toc.py https://spikestudio.kibe.la/notes/YOUR_NOTE_ID --dry-run
+
+# 深度指定とドライランの組み合わせ
+python kibela_toc.py https://spikestudio.kibe.la/notes/YOUR_NOTE_ID --depth 2 --dry-run
+
+## ヘルプの表示
+python kibela_toc.py --help
+
+## 使用例（実際のURL例）
+# 例: https://spikestudio.kibe.la/notes/12345 の場合
+python kibela_toc.py https://spikestudio.kibe.la/notes/12345
+python kibela_toc.py https://spikestudio.kibe.la/notes/12345 --depth 2
+python kibela_toc.py https://spikestudio.kibe.la/notes/12345 --depth 4 --dry-run
+
+## 注意事項
+# - YOUR_NOTE_ID の部分を実際のノートIDに置き換えてください
+# - 環境変数 KIBELA_TOKEN と KIBELA_TEAM が設定されている必要があります
+# - 初回実行前に pip install -r requirements.txt を実行してください
